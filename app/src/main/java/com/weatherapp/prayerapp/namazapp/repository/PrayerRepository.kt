@@ -39,7 +39,7 @@ fun getandsaveprayer(year: Int, month: Int, latitude: Double, longitude: Double,
 
     fun getprayerfromdb(){
      CoroutineScope(Dispatchers.IO).launch {
-         var list= prayerDb.getprayerdao().getprayer()
+         val list= prayerDb.getprayerdao().getprayer()
          _ourprayer.postValue(list)
      }
 
